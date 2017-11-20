@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.html %}
+
+  <body class="{{ page.body-class }}">
+    <div class="overlay" style="display: none"></div>
+    {% include nav.html %}
+    <div class="container-fluid">
+      <div class="row">
+        
+        {% include header.html %}
+        <main class="col-sm-12 col-md-8 col-lg-8 page-content" aria-label="Content">        
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              {{ content }}
+            </div>
+          </div>
+        </main>
+        
+      </div>
+    </div>
+  </body>
+
+</html>
